@@ -11,7 +11,7 @@ class ProductListView(ListView):
    model = Product
    template_name = 'catalog/product_list.html'
    context_object_name = 'product_list'
-   paginate_by = 2
+   paginate_by = 3
 
 #Vídeo 33
 class CategoryListView(ListView):
