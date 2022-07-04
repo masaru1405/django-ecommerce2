@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-
+{% load testetags %}
 {% block content %}
 
  <h1>Index</h1>
+ <h1>{{nome|lower}}</h1>
+ <h1>{{nome|cut:"E"}}</h1>
+
 
 {% endblock %}

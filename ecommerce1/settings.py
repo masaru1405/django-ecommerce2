@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #apps
     'home',
     'catalog',
+
+    #libs
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +76,11 @@ TEMPLATES = [
                 #apps
                 'catalog.context_processors.categories'
             ],
+            'libraries': {
+                'testetags': 'ecommerce1.templatetags.testetags',
+                'pagination': 'ecommerce1.templatetags.pagination',
+            },
+         
         },
     },
 ]
@@ -137,3 +146,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Para indicar onde estão nossos apps
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
+
+#Email (modo de desenvolvimento)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
