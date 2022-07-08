@@ -28,3 +28,4 @@ class ProductListTestCase(TestCase):
       """Verifica se retorna 404 ao acessar uma página inexistente"""
       response = self.client.get('{}?page=20'.format(self.url))
       self.assertEquals(response.status_code, 404)
+   

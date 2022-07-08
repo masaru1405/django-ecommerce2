@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #apps
     'home',
     'catalog',
+    'account',
 
     #libs
     'widget_tweaks',
@@ -150,3 +151,8 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))
 #Email (modo de desenvolvimento)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+
+#Auth
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'

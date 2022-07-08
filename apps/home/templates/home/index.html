@@ -2,9 +2,10 @@
 {% load testetags %}
 {% block content %}
 
- <h1>Index</h1>
- <h1>{{nome|lower}}</h1>
- <h1>{{nome|cut:"E"}}</h1>
-
+{% if user.is_authenticated %}
+   <h1>Olá, {{user|capfirst}}</h1>
+{% else %}
+   <h1>Usuário não logado</h1>
+{% endif %}
 
 {% endblock %}
