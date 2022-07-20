@@ -14,6 +14,7 @@ class SignupView(CreateView):
    form_class = UserCreationForm
    template_name = 'account/register.html'
    success_url = '/'
+   #success_url = reverse_lazy('index')
 
    def get(self, request, *args, **kwargs):
       if self.request.user.is_authenticated:
